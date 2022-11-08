@@ -61,7 +61,7 @@ func GetBook(c *gin.Context) {
 	c.JSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
-// CreateBook adds an book from JSON received in the request body.
+// CreateBook adds a book from JSON received in the request body.
 func CreateBook(c *gin.Context) {
 	var newBook Book
 
@@ -75,7 +75,7 @@ func CreateBook(c *gin.Context) {
 	c.JSON(http.StatusCreated, newBook)
 }
 
-// UpdateBook updates an book from JSON received in the request body.
+// UpdateBook updates a book from JSON received in the request body.
 func UpdateBook(c *gin.Context) {
 	var bookRequest BookRequest
 
@@ -99,7 +99,7 @@ func UpdateBook(c *gin.Context) {
 	c.JSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
-// DeleteBook deletes an book by its ID.
+// DeleteBook deletes a book by its ID.
 func DeleteBook(c *gin.Context) {
 	var bookRequest BookRequest
 
